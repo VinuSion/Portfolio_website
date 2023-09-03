@@ -1,7 +1,7 @@
 {
-    "homepage": "http://VinuSion.github.io/Portfolio_website/",
     "name": "3d-portfolio-vinusion",
     "private": true,
+    "homepage": "http://VinuSion.github.io/Portfolio_website",
     "version": "0.0.0",
     "type": "module",
     "scripts": {
