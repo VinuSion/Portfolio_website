@@ -1,15 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo } from "../assets";
+import { Divide as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(toggle);
+    }, 0);
+  }, [toggle]);
 
   return (
-    <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}>
+    <nav
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+    >
       <div className="w-full flex justify-between items-center max-w-7x1 mx-auto">
         <Link
           to="/"
@@ -42,19 +52,17 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
+          <Hamburger
+            duration={0.5}
+            toggled={toggle}
+            toggle={setToggle}
+            size={28}
             alt="Menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => {
-              setToggle(!toggle);
-            }}
+            className="object-contain cursor-pointer"
           />
 
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-gradient-to-r from-[#0d3c36] to-[#051614] absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? "hidden" : "flex"} ${!animate ? "opacity-0" : "opacity-100"} transition-all ease-in-out duration-500 y p-6 bg-gradient-to-b from-[#0d3c36] to-[#051614] absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
