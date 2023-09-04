@@ -21,6 +21,9 @@ import {
   carrent,
   jobit,
   tripguide,
+  github,
+  linkedin,
+  globe,
 } from "../assets";
 
 export const navLinks = [
@@ -35,6 +38,27 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+];
+
+const socials = [
+  {
+    id: 1,
+    name: "Github",
+    url: "https://github.com/VinuSion/",
+    img: github,
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/william-gomez-vs",
+    img: linkedin,
+  },
+  {
+    id: 3,
+    name: "My Website",
+    url: "https://vinusion.com/",
+    img: globe,
   },
 ];
 
@@ -251,4 +275,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { socials, services, technologies, experiences, testimonials, projects };

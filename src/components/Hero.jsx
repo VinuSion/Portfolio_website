@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { BrowserView, MobileView } from "react-device-detect";
 import { ComputersCanvas } from "./canvas";
+import { socials } from "../constants";
 import { pc } from "../assets";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="overflow-hidden relative w-full h-screen mx-auto">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7x1 mx-auto flex flex-row items-start gap-5`}
       >
@@ -23,15 +24,32 @@ const Hero = () => {
             I develop graphic designs, user interfaces{" "}
             <br className="sm:block hidden" /> and web applications.
           </p>
+
+          <div className="flex flex-row mt-5">
+            {socials.map((social) => (
+              <div
+                key={`${social.id}`}
+                onClick={() => window.open(`${social.url}`, "__blank")}
+                className="bg-gradient-to-t from-[#0d3c36] to-[#051614] border-2 border-[#0fbe84] w-[50px] h-[50px] rounded-full flex justify-center items-center cursor-pointer mr-5"
+              >
+                <img
+                  src={social.img}
+                  alt={social.name}
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            ))}
+          </div>
+          
         </div>
       </div>
-      
+
       <BrowserView className="relative w-full h-screen mx-auto">
         <ComputersCanvas />
       </BrowserView>
       <MobileView>
         <img
-          className="absolute xl:top-[130px] xl:scale-[80%] lg:top-[270px] md:bottom-[120px] sm:bottom-[160px] xs:bottom-[250px] scale-100 mx-auto flex justify-center items-center"
+          className="absolute xl:top-[130px] xl:scale-[80%] lg:bottom-[270px] md:bottom-[120px] sm:bottom-[160px] xs:bottom-[100px] bottom-20 scale-150 mx-auto flex justify-center items-center"
           src={pc}
           alt="PC Image"
         />
