@@ -12,7 +12,9 @@ const  App = () => {
         <About />
         {/* WHEN YOU HAVE WORK EXPERIENCE, REMOVE THESE COMMENTS */}
         {/* <Experience /> */}
-        <Tech />
+
+        {/* <Tech /> */}
+
         <Works />
         {/* WHEN YOU HAVE PEOPLE WHO CAN VOUCH FOR YOU, REMOVE THESE COMMENTS */}
         {/* <Feedbacks /> */}
