@@ -1,5 +1,5 @@
 # William Gomez - VinuSion
-My Personal Portfolio website
+My Personal Portfolio website :)
 
 You can view it here: https://vinusion.com/
 
