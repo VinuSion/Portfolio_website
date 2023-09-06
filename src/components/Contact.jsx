@@ -24,8 +24,12 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
+    const ong = document.getElementById("ongod").value;
+
+    if(ong != "") {
+      alert("Thank you for submitting :)");
+    } else {
+      emailjs.send(
         "service_ukoe9ye",
         "template_55y0cab",
         {
@@ -36,21 +40,24 @@ const Contact = () => {
           message: form.message,
         },
         "FzQsrzlyUFlXDvyQP"
-      )
-      .then(() => {
-        setLoading(false);
-        alert("Thank you. I will get back to you as soon as possible.");
+      ).then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
 
-        setForm({
-          name: "",
-          email: "",
-          message: "",
-        });
-      }, (error) => {
-        setLoading(false)
-        console.log(error);
-        alert('Something went wrong.');
-      });
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong.");
+        }
+      );
+    }
   };
 
   return (
@@ -63,6 +70,7 @@ const Contact = () => {
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
         <form
+          id="ddown"
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
@@ -89,6 +97,14 @@ const Contact = () => {
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
+          <input
+            type="text"
+            name="website"
+            id="ongod"
+            className="hidden invisible"
+            tabIndex="-1"
+            autoComplete="nope"
+          ></input>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
