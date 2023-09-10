@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import Popup from "./Popup";
 
 const Contact = () => {
   const formRef = useRef();
@@ -14,10 +15,19 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [visibility, setVisibility] = useState(false);
+  const [message, setMessage] = useState({
+    title: "",
+    content: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+  };
+
+  const popupCloseHandler = () => {
+    setVisibility(false);
   };
 
   const handleSubmit = (e) => {
@@ -26,115 +36,140 @@ const Contact = () => {
 
     const ong = document.getElementById("ongod").value;
 
-    if(ong != "") {
+    if (ong != "") {
       alert("Thank you for submitting :)");
+      setLoading(false);
     } else {
-      emailjs.send(
-        "service_ukoe9ye",
-        "template_55y0cab",
-        {
-          from_name: form.name,
-          to_name: "William",
-          from_email: form.email,
-          to_email: "williamgc250@gmail.com",
-          message: form.message,
-        },
-        "FzQsrzlyUFlXDvyQP"
-      ).then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("Something went wrong.");
-        }
-      );
+      if (form.name == "" || form.email == "" || form.message == "") {
+        setVisibility(true);
+        setMessage({
+          title: "🤔Forgot Something?",
+          content: "Please fill in the form to send a message!",
+        });
+        setLoading(false);
+      } else {
+        emailjs.send(
+          "service_ukoe9ye",
+          "template_55y0cab",
+          {
+            from_name: form.name,
+            to_name: "William",
+            from_email: form.email,
+            to_email: "williamgc250@gmail.com",
+            message: form.message,
+          },
+          "FzQsrzlyUFlXDvyQP"
+        ).then(
+          () => {
+            setLoading(false);
+            setVisibility(true);
+            setMessage({
+              title: "✅Message Sent!",
+              content: "Thank you! I will get back to you as soon as possible.",
+            });
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            setLoading(false);
+            console.log(error);
+            setVisibility(true);
+            setMessage({
+              title: "⛔What! An Error?!",
+              content: "It appears something went wrong... :(",
+            });
+          }
+        );
+      }
     }
   };
 
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
-
-        <form
-          id="ddown"
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+    <>
+      <Popup
+        onClose={popupCloseHandler}
+        show={visibility}
+        title={message.title}
+        content={message.content}
+      />
+      <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
+        <motion.div
+          variants={slideIn("left", "tween", 0.2, 1)}
+          className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
         >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name</span>
+          <p className={styles.sectionSubText}>Get in touch</p>
+          <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+          <form
+            id="ddown"
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="mt-12 flex flex-col gap-8"
+          >
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Name</span>
+              <input
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="What's your name?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Email</span>
+              <input
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="What's your email?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
             <input
               type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your name?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email</span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your email?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
-          <input
-            type="text"
-            name="website"
-            id="ongod"
-            className="hidden invisible"
-            tabIndex="-1"
-            autoComplete="nope"
-          ></input>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message</span>
-            <textarea
-              rows="7"
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder="What do you want to say?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
-            />
-          </label>
+              name="website"
+              id="ongod"
+              className="hidden invisible"
+              tabIndex="-1"
+              autoComplete="nope"
+            ></input>
+            <label className="flex flex-col">
+              <span className="text-white font-medium mb-4">Your Message</span>
+              <textarea
+                rows="7"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                placeholder="What do you want to say?"
+                className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              />
+            </label>
 
-          <div className="bg-gradient-to-b from-[#00e7a6] to-[#1a8abe] rounded-xl p-[1px] w-[200px] flex">
-            <button
-              type="submit"
-              className="bg-tertiary py-3 px-8 outline-none text-white font-bold rounded-xl w-[200px]"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-          </div>
-        </form>
-      </motion.div>
+            <div className="bg-gradient-to-b from-[#00e7a6] to-[#1a8abe] rounded-xl p-[1px] w-[200px] flex">
+              <button
+                type="submit"
+                className="bg-tertiary py-3 px-8 outline-none text-white font-bold rounded-xl w-[200px]"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </div>
+          </form>
+        </motion.div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[450px]"
-      >
-        <EarthCanvas />
-      </motion.div>
-    </div>
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="xl:flex-1 xl:h-auto md:h-[550px] h-[450px]"
+        >
+          <EarthCanvas />
+        </motion.div>
+      </div>
+    </>
   );
 };
 
