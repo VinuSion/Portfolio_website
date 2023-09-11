@@ -21,8 +21,8 @@ const Hero = () => {
             Hi, I'm <span className="text-[#00e7a6]">William</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop graphic designs, user interfaces{" "}
-            <br className="sm:block hidden" /> and web applications.
+            I make captivating designs, engaging UIs, {" "}
+            <br className="sm:block hidden" />and breathe life into web applications.
           </p>
 
           <div className="flex flex-row mt-5">
@@ -30,7 +30,7 @@ const Hero = () => {
               <div
                 key={`${social.id}`}
                 onClick={() => window.open(`${social.url}`, "__blank")}
-                className="bg-gradient-to-t from-[#0d3c36] to-[#051614] border-2 border-[#0fbe84] w-[50px] h-[50px] rounded-full flex justify-center items-center cursor-pointer mr-5"
+                className="transition-all duration-[450] bg-gradient-to-t from-[#3d816b] via-[#0d3c36] to-[#051614] bg-size-200 bg-pos-0 hover:bg-pos-100 border-2 border-[#0fbe84] w-[50px] h-[50px] rounded-full flex justify-center items-center cursor-pointer mr-5"
               >
                 <img
                   src={social.img}

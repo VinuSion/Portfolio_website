@@ -212,7 +212,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "StocStores",
+    name: "StockStores",
     description:
       "Web-based platform that allows store owners manage their local convenience store inventory, providing an easy and efficient solution for local business management.",
     tags: [

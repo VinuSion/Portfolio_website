@@ -15,7 +15,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", 0.21 * index, 0.6)}>
       <Tilt
         options={{
           max: 45,
@@ -93,11 +93,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          The following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories on GitHub and live demos in it. These
-          projects reflect my ability to solve complex problems, work with
-          different tecnologies, and manage them effectively.
+          Prepare to be dazzled as we dive into a showcase of my expertise through real-world projects. Here, you'll find a curated selection of my work, each project briefly described with direct links to their GitHub code repositories and live demos. These projects highlight my ability to tackle complex problems, adeptly handle various technologies, and manage them with efficiency and professionalism.
         </motion.p>
       </div>
 
