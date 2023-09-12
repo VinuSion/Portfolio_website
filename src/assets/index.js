@@ -26,7 +26,7 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import stocstores from "./stocstores.png";
+import stockstores from "./stockstores.png";
 import sparkwatch from "./sparkwatch.png";
 import tripguide from "./tripguide.png";
 
@@ -55,7 +55,7 @@ export {
   shopify,
   starbucks,
   tesla,
-  stocstores,
+  stockstores,
   sparkwatch,
   tripguide,
 };
