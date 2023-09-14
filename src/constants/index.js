@@ -214,7 +214,7 @@ const projects = [
   {
     name: "StockStores",
     description:
-      "Web-based platform that allows store owners manage their local convenience store inventory, providing an easy and efficient solution for local business management.",
+      "A web-based platform empowering local store owners to effortlessly manage their neighborhood convenience store inventory, offering a streamlined and effective solution for local business administration.",
     tags: [
       {
         name: "react",
@@ -226,7 +226,7 @@ const projects = [
       },
     ],
     image: stockstores,
-    // demo: "https://youtube.com/",
+    demo: "https://stockstores.onrender.com/",
     source_code_link: "https://github.com/VinuSion/StockStores",
   },
   {
@@ -248,7 +248,7 @@ const projects = [
       },
     ],
     image: sparkwatch,
-    // demo: "https://youtube.com/",
+    demo: "https://youtube.com/",
     source_code_link: "https://github.com/VinuSion/SparkWatch-Movies",
   },
   {
@@ -270,7 +270,7 @@ const projects = [
       },
     ],
     image: tripguide,
-    // demo: "https://youtube.com/",
+    demo: "https://youtube.com/",
     source_code_link: "https://github.com/",
   },
 ];
