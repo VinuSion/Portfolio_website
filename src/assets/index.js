@@ -1,8 +1,8 @@
 import logo from "./logo.svg";
-import backend from "./backend.png";
+import js from "./js.png";
 import ux from "./ux.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import react from "./react.png";
+import frontend from "./frontend.png";
 import github from "./github.png";
 import linkedin from "./linkedin.png"
 import globe from "./globe.png";
@@ -32,10 +32,10 @@ import tripguide from "./tripguide.png";
 
 export {
   logo,
-  backend,
+  js,
   ux,
-  mobile,
-  web,
+  react,
+  frontend,
   github,
   linkedin,
   globe,

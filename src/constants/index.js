@@ -1,8 +1,8 @@
 import {
-  mobile,
-  backend,
+  react,
+  js,
   ux,
-  web,
+  frontend,
   javascript,
   typescript,
   html,
@@ -65,15 +65,15 @@ const socials = [
 const services = [
   {
     title: "Frontend Developer",
-    icon: web,
+    icon: frontend,
   },
   {
     title: "React Developer",
-    icon: mobile,
+    icon: react,
   },
   {
     title: "Javascript Developer",
-    icon: backend,
+    icon: js,
   },
   {
     title: "UX Designer",
@@ -248,7 +248,7 @@ const projects = [
       },
     ],
     image: sparkwatch,
-    demo: "https://youtube.com/",
+    demo: "https://sparkwatch-movies.web.app/",
     source_code_link: "https://github.com/VinuSion/SparkWatch-Movies",
   },
   {
