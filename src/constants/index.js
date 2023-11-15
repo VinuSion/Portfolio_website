@@ -243,7 +243,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "vite",
         color: "pink-text-gradient",
       },
     ],
