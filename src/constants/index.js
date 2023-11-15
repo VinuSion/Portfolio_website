@@ -252,7 +252,7 @@ const projects = [
     source_code_link: "https://github.com/VinuSion/SparkWatch-Movies",
   },
   {
-    name: "ArtiHeal",
+    name: "Artiheal",
     description:
       "A comprehensive health follow-up platform that allows users to choose their daily health routine and keep up with details about the state of their health with an intuitive dashboard.",
     tags: [
