@@ -20,7 +20,7 @@ import {
   shopify,
   stockstores,
   sparkwatch,
-  tripguide,
+  artiheal,
   github,
   linkedin,
   globe,
@@ -252,16 +252,16 @@ const projects = [
     source_code_link: "https://github.com/VinuSion/SparkWatch-Movies",
   },
   {
-    name: "ArtiHeal+",
+    name: "ArtiHeal",
     description:
       "A comprehensive health follow-up platform that allows users to choose their daily health routine and keep up with details about the state of their health with an intuitive dashboard.",
     tags: [
       {
-        name: "react",
+        name: "typescript",
         color: "blue-text-gradient",
       },
       {
-        name: "mysql",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
@@ -269,9 +269,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    demo: "https://youtube.com/",
-    source_code_link: "https://github.com/",
+    image: artiheal,
+    demo: "https://artiheal.onrender.com/",
+    source_code_link: "https://github.com/VinuSion/Artiheal",
   },
 ];
 

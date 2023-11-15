@@ -28,7 +28,7 @@ import tesla from "./company/tesla.png";
 
 import stockstores from "./stockstores.png";
 import sparkwatch from "./sparkwatch.png";
-import tripguide from "./tripguide.png";
+import artiheal from "./artiheal.png";
 
 export {
   logo,
@@ -57,5 +57,5 @@ export {
   tesla,
   stockstores,
   sparkwatch,
-  tripguide,
+  artiheal,
 };
