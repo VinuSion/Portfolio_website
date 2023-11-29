@@ -224,31 +224,35 @@ const projects = [
         name: "mongodb",
         color: "green-text-gradient",
       },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
     ],
     image: stockstores,
     demo: "https://stockstores.onrender.com/",
     source_code_link: "https://github.com/VinuSion/StockStores",
   },
   {
-    name: "SparkWatch Movies",
+    name: "Sparkwatch Movies",
     description:
-      "Web application that mocks IMDb movie listing search using openIMDb API, enabling users to find their favorite movies with ease with useful and relevant information of each movie title.",
+      "Web application that replicates IMDb movie listing using themoviedb.org API, enabling users to find their favorite movies and favorite them with ease with useful and relevant information of each movie title.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
-        name: "vite",
+        name: "material-ui",
         color: "pink-text-gradient",
       },
     ],
     image: sparkwatch,
-    demo: "https://sparkwatch-movies.web.app/",
+    demo: "https://sparkwatch-movies-8095d.web.app/",
     source_code_link: "https://github.com/VinuSion/SparkWatch-Movies",
   },
   {
