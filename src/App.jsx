@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { usePopup } from "./PopupContext";
 import {
   About,
   Contact,
@@ -10,10 +11,13 @@ import {
   TechMobile,
   Works,
   StarsCanvas,
+  Popup,
 } from "./components";
 import { BrowserView, MobileView } from "react-device-detect";
 
 const App = () => {
+  const { visibility, message, closeModal } = usePopup();
+
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
@@ -40,6 +44,12 @@ const App = () => {
           <StarsCanvas />
         </div>
       </div>
+      <Popup
+        onClose={closeModal}
+        show={visibility}
+        title={message.title}
+        content={message.content}
+      />
     </BrowserRouter>
   );
 };
