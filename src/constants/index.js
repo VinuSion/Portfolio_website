@@ -215,6 +215,7 @@ const projects = [
     name: "StockStores",
     description:
       "A web-based platform empowering local store owners to effortlessly manage their neighborhood convenience store inventory, offering a streamlined and effective solution for local business administration.",
+    language: "Spanish",
     tags: [
       {
         name: "react",
@@ -237,6 +238,7 @@ const projects = [
     name: "Sparkwatch Movies",
     description:
       "Web application that replicates IMDb movie listing using themoviedb.org API, enabling users to find their favorite movies and favorite them with ease with useful and relevant information of each movie title.",
+    language: "English",
     tags: [
       {
         name: "react",
@@ -259,6 +261,7 @@ const projects = [
     name: "Artiheal",
     description:
       "A comprehensive health follow-up platform that allows users to choose their daily health routine and keep up with details about the state of their health with an intuitive dashboard.",
+    language: "Spanish",
     tags: [
       {
         name: "typescript",
@@ -279,4 +282,9 @@ const projects = [
   },
 ];
 
-export { socials, services, technologies, experiences, testimonials, projects };
+const cvLinks = {
+  english: "https://github.com/VinuSion/Portfolio_website/files/13506836/WILLIAM-GOMEZ_CV_English.pdf",
+  spanish: "https://github.com/VinuSion/Portfolio_website/files/13506845/WILLIAM-GOMEZ_CV_Spanish.pdf",
+}
+
+export { socials, services, technologies, experiences, testimonials, projects, cvLinks };
