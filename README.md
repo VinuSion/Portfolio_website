@@ -1,4 +1,4 @@
-# William Gomez - VinuSion
+# William Gómez - VinuSion
 My Personal Portfolio website :)
 
 You can view it here: https://vinusion.com/
