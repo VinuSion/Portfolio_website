@@ -132,6 +132,12 @@ button, a, div {
   -webkit-text-fill-color: transparent;
 }
 
+/* Overwriting Vertical Timeline Element Styles */
+.vertical-timeline:before {
+  border-radius: 10px;
+  background: linear-gradient(45deg, transparent, white 55%);
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
