@@ -26,8 +26,7 @@ const App = () => {
           <Hero />
         </div>
         <About />
-        {/* WHEN YOU HAVE WORK EXPERIENCE, REMOVE THESE COMMENTS */}
-        {/* <Experience /> */}
+        <Experience />
 
         <BrowserView>
           <Tech />

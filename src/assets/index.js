@@ -21,10 +21,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import mayaluna from "./company/mayaluna.png";
+import guarapo from "./company/guarapo.png";
 
 import stockstores from "./stockstores.png";
 import sparkwatch from "./sparkwatch.png";
@@ -51,10 +49,8 @@ export {
   redux,
   tailwind,
   typescript,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  mayaluna,
+  guarapo,
   stockstores,
   sparkwatch,
   artiheal,

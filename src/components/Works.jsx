@@ -126,5 +126,4 @@ const Works = () => {
   );
 };
 
-// REMOVE ID "work" WHEN YOU HAVE ACTUAL JOB EXPERIENCE!
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "");

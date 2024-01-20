@@ -14,10 +14,8 @@ import {
   mongodb,
   git,
   figma,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  mayaluna,
+  guarapo,
   stockstores,
   sparkwatch,
   artiheal,
@@ -130,55 +128,29 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    title: "Frontend Intern",
+    company_name: "Mayaluna Seguros",
+    icon: mayaluna,
+    iconBg: "#ffffff",
+    date: "Jul 2023 - Dec 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained company homepage using React and Next.js.",
+      "Collaborated with design team to implement visually appealing and responsive UI components.",
+      "Integrated dynamic content, conducted code reviews, and communicated effectively with cross-functional teams.",
+      "Proactively addressed challenges, emphasized visual consistency, and optimized frontend performance at Mayaluna Seguros.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    title: "Jr. Frontend Developer",
+    company_name: "Guarapo Labs",
+    icon: guarapo,
+    iconBg: "#ffffff",
+    date: "Jan 2024 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Contributed to code maintenance on diverse client projects within a business platform at Guarapo Labs.",
+      "Communicated with Client Success Managers (CSMs) to manage CMS content and seamlessly integrate it with the frontend.",
+      "Proactively addressed challenges in creating and building new sites for platform clients.",
+      "Optimized code for enhanced performance across multiple platforms and devices, integrating third-party APIs and services effectively.",
     ],
   },
 ];
@@ -283,8 +255,18 @@ const projects = [
 ];
 
 const cvLinks = {
-  english: "https://github.com/VinuSion/Portfolio_website/files/13506836/WILLIAM-GOMEZ_CV_English.pdf",
-  spanish: "https://github.com/VinuSion/Portfolio_website/files/13506845/WILLIAM-GOMEZ_CV_Spanish.pdf",
-}
+  english:
+    "https://github.com/VinuSion/Portfolio_website/files/13506836/WILLIAM-GOMEZ_CV_English.pdf",
+  spanish:
+    "https://github.com/VinuSion/Portfolio_website/files/13506845/WILLIAM-GOMEZ_CV_Spanish.pdf",
+};
 
-export { socials, services, technologies, experiences, testimonials, projects, cvLinks };
+export {
+  socials,
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  cvLinks,
+};
