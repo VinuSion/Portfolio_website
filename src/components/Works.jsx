@@ -1,10 +1,10 @@
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { Tilt } from 'react-tilt'
+import { motion } from 'framer-motion'
+import { styles } from '../styles'
+import { github } from '../assets'
+import { SectionWrapper } from '../hoc'
+import { projects } from '../constants'
+import { fadeIn, textVariant } from '../utils/motion'
 
 const ProjectCard = ({
   index,
@@ -17,15 +17,8 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", 0.21 * index, 0.6)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
+    <motion.div variants={fadeIn('up', 'spring', 0.21 * index, 0.6)}>
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -34,8 +27,8 @@ const ProjectCard = ({
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={() => window.open(demo, "__blank")}
-              className="transition-all duration-[450] bg-gradient-to-t from-[#3d816b] via-[#0d3c36] to-[#051614] bg-size-200 bg-pos-0 hover:bg-pos-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-3"
+              onClick={() => window.open(demo, '__blank')}
+              className="transition-all duration-[450] bg-gradient-to-t from-g1 via-g2 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer mr-3 border-2 border-border"
             >
               <svg
                 className="w-1/3 h-1/3 object-contain cursor-pointer "
@@ -49,8 +42,8 @@ const ProjectCard = ({
             </div>
 
             <div
-              onClick={() => window.open(source_code_link, "__blank")}
-              className="transition-all duration-[450] bg-gradient-to-t from-[#3d816b] via-[#0d3c36] to-[#051614] bg-size-200 bg-pos-0 hover:bg-pos-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              onClick={() => window.open(source_code_link, '__blank')}
+              className="transition-all duration-[450] bg-gradient-to-t from-g1 via-g2 to-primary bg-size-200 bg-pos-0 hover:bg-pos-100 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border-2 border-border"
             >
               <img
                 src={github}
@@ -64,7 +57,7 @@ const ProjectCard = ({
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
           <p className="my-2 text-secondary text-[14px] mb-4">{description}</p>
-          <div className="flex flex-row font-[600] items-center justify-start space-x-1 rounded-full px-3 bg-[#0fbe84]/20 text-secondary  text-sm w-fit">
+          <div className="flex flex-row font-[600] items-center justify-start space-x-1 rounded-full px-3 bg-border/20 text-secondary  text-sm w-fit">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="14"
@@ -90,10 +83,10 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
-  );
-};
+  )
+}
 
 const Works = () => {
   return (
@@ -105,7 +98,7 @@ const Works = () => {
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
+          variants={fadeIn('', '', 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Prepare to be dazzled as we dive into a showcase of my expertise
@@ -123,7 +116,7 @@ const Works = () => {
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, '')

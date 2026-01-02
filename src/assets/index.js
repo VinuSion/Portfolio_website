@@ -7,7 +7,8 @@ import github from "./github.png";
 import linkedin from "./linkedin.png"
 import globe from "./globe.png";
 
-import pc from "./pc_render.png";
+import pc from "./pc_render.avif";
+import laptop from "./laptop_render.avif";
 
 import css from "./tech/css.png";
 import figma from "./tech/figma.png";
@@ -22,7 +23,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
 import mayaluna from "./company/mayaluna.png";
-import guarapo from "./company/guarapo.png";
+import redux_company from "./company/redux.png";
 
 import stockstores from "./stockstores.png";
 import sparkwatch from "./sparkwatch.png";
@@ -38,6 +39,7 @@ export {
   linkedin,
   globe,
   pc,
+  laptop,
   css,
   figma,
   git,
@@ -50,7 +52,7 @@ export {
   tailwind,
   typescript,
   mayaluna,
-  guarapo,
+  redux_company,
   stockstores,
   sparkwatch,
   artiheal,

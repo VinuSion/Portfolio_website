@@ -15,13 +15,12 @@ import {
   git,
   figma,
   mayaluna,
-  guarapo,
+  redux_company,
   stockstores,
   sparkwatch,
   artiheal,
   github,
   linkedin,
-  globe,
 } from "../assets";
 
 export const navLinks = [
@@ -49,14 +48,8 @@ const socials = [
   {
     id: 2,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/william-gomez-vs",
+    url: "https://www.linkedin.com/in/william-dev-g/",
     img: linkedin,
-  },
-  {
-    id: 3,
-    name: "My Website",
-    url: "https://vinusion.com/",
-    img: globe,
   },
 ];
 
@@ -142,12 +135,12 @@ const experiences = [
   },
   {
     title: "Jr. Frontend Developer",
-    company_name: "Guarapo Labs",
-    icon: guarapo,
+    company_name: "Redux",
+    icon: redux_company,
     iconBg: "#ffffff",
     date: "Jan 2024 - Present",
     points: [
-      "Contributed to code maintenance on diverse client projects within a business platform at Guarapo Labs.",
+      "Contributed to code maintenance on diverse client projects within a business platform at SpeedDigital.",
       "Communicated with Client Success Managers (CSMs) to manage CMS content and seamlessly integrate it with the frontend.",
       "Proactively addressed challenges in creating and building new sites for platform clients.",
       "Optimized code for enhanced performance across multiple platforms and devices, integrating third-party APIs and services effectively.",
@@ -158,27 +151,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "William is an outstanding Full-Stack Engineer with strong React.js expertise, known for delivering scalable, user-focused applications even under tight deadlines.",
+    name: "Juan Salas",
+    designation: "Frontend Developer",
+    company: "Redux",
+    image: "https://res.cloudinary.com/stkv2/image/upload/v1767309935/juan_rhd9c5.jpg",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "William stands out for his willingness to share knowledge, commitment to clean code and best practices, and continuous drive to learn new technologies.",
+    name: "Charly Palencia",
+    designation: "CEO",
+    company: "Guarapo LLC",
+    image: "https://res.cloudinary.com/stkv2/image/upload/v1767309935/charly_t6uiru.jpg",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "William is a highly dependable and curious team member who consistently works with autonomy, excellence, and a positive collaborative attitude.",
+    name: "Joan Romero",
+    designation: "People Ops Lead",
+    company: "Redux",
+    image: "https://res.cloudinary.com/stkv2/image/upload/v1767309935/joan_rehkuy.jpg",
   },
 ];
 
@@ -199,7 +192,7 @@ const projects = [
       },
       {
         name: "bootstrap",
-        color: "pink-text-gradient",
+        color: "purple-text-gradient",
       },
     ],
     image: stockstores,
@@ -218,11 +211,11 @@ const projects = [
       },
       {
         name: "redux",
-        color: "green-text-gradient",
+        color: "purple-text-gradient",
       },
       {
         name: "material-ui",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     image: sparkwatch,
@@ -245,7 +238,7 @@ const projects = [
       },
       {
         name: "tailwind",
-        color: "pink-text-gradient",
+        color: "blue-text-gradient",
       },
     ],
     image: artiheal,
@@ -256,9 +249,9 @@ const projects = [
 
 const cvLinks = {
   english:
-    "https://github.com/VinuSion/Portfolio_website/files/13506836/WILLIAM-GOMEZ_CV_English.pdf",
+    "https://github.com/user-attachments/files/24403231/WILLIAM-GOMEZ_CV-English.pdf",
   spanish:
-    "https://github.com/VinuSion/Portfolio_website/files/13506845/WILLIAM-GOMEZ_CV_Spanish.pdf",
+    "https://github.com/user-attachments/files/24403232/WILLIAM-GOMEZ_CV-Spanish.pdf",
 };
 
 export {

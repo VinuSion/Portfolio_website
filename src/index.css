@@ -22,7 +22,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #0fbe84;
+  background: #0fbea1;
 }
 
 ::selection {
@@ -110,6 +110,22 @@ button, a, div {
   background: linear-gradient(to top,
       #2f80ed,
       #56ccf2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.purple-text-gradient {
+  background: #7b2ff7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top,
+      #7b2ff7,
+      #f107a3);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top,
+      #7b2ff7,
+      #f107a3);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   background-clip: text;

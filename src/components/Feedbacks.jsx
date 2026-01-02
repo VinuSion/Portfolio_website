@@ -1,10 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react'
+import { motion } from 'framer-motion'
 
-import { styles } from "../styles";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { styles } from '../styles'
+import { SectionWrapper } from '../hoc'
+import { fadeIn, textVariant } from '../utils/motion'
+import { testimonials } from '../constants'
 
 const FeedbackCard = ({
   index,
@@ -15,10 +15,10 @@ const FeedbackCard = ({
   image,
 }) => (
   <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-gradient-to-b from-[#00e7a6] to-[#1a8abe] shadow-card rounded-3xl p-[1px]"
+    variants={fadeIn('', 'spring', index * 0.3, 0.75)}
+    className="bg-gradient-to-b from-accent to-sea shadow-card rounded-3xl p-[1px] w-full lg:w-auto"
   >
-    <div className="bg-primary p-10 rounded-3xl xs:w-[320px] w-full">
+    <div className="bg-primary p-10 rounded-3xl w-full lg:w-[320px]">
       <p className="text-white font-black text-[48px]">"</p>
 
       <div className="mt-1">
@@ -30,26 +30,26 @@ const FeedbackCard = ({
               <span className="green-text-gradient">@</span> {name}
             </p>
             <p className="mt-1 text-secondary text-[12px]">
-              {designation} of {company}
+              {designation} at {company}
             </p>
           </div>
 
           <img
             src={image}
             alt={`feedback_by-${name}`}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover border-2 border-border2"
           />
         </div>
       </div>
     </div>
   </motion.div>
-);
+)
 
 const Feedbacks = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[230px] sm:min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say</p>
@@ -62,7 +62,7 @@ const Feedbacks = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Feedbacks, '')

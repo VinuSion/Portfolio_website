@@ -36,13 +36,13 @@ const App = () => {
         </MobileView>
 
         <Works />
-        {/* WHEN YOU HAVE PEOPLE WHO CAN VOUCH FOR YOU, REMOVE THESE COMMENTS */}
-        {/* <Feedbacks /> */}
+        <Feedbacks />
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />
         </div>
       </div>
+
       <Popup
         onClose={closeModal}
         show={visibility}

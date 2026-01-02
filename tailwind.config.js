@@ -5,13 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#051614",
+        primary: "#051516",
         secondary: "#a4c1c0",
-        tertiary: "#0f302c",
-        "black-100": "#0d2624",
-        "black-200": "#031c26",
+        tertiary: "#0f302f",
+        accent: "#0cd3ab",
+        border: "#0fbea1",
+        border2: "#3b9491",
+        sea: "#1ab9bf",
+        g1: "#3d827a",
+        g2: "#0d3b3d",
+        "black-100": "#0d2625",
         "white-100": "#f3f3f3",
-        "black-rgba": 'rgba(0, 0, 0, 0.6)',
       },
       boxShadow: {
         card: "0px 35px 120px -15px #1e3135",
@@ -21,7 +25,7 @@ module.exports = {
         ns: "300px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+        "hero-pattern": "url('/src/assets/hero-bg.png')",
       },
       backgroundSize: {
         'size-200': '200% 200%',
