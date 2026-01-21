@@ -23,6 +23,8 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 
 import mayaluna from "./company/mayaluna.png";
+import guarapo from "./company/guarapo.png";
+import amiralabs from "./company/amiralabs.png";
 import redux_company from "./company/redux.png";
 
 import stockstores from "./stockstores.png";
@@ -53,6 +55,8 @@ export {
   typescript,
   mayaluna,
   redux_company,
+  guarapo,
+  amiralabs,
   stockstores,
   sparkwatch,
   artiheal,

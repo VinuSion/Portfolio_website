@@ -1,4 +1,3 @@
-import React from 'react'
 import { motion } from 'framer-motion'
 
 import { styles } from '../styles'
@@ -18,13 +17,13 @@ const FeedbackCard = ({
     variants={fadeIn('', 'spring', index * 0.3, 0.75)}
     className="bg-gradient-to-b from-accent to-sea shadow-card rounded-3xl p-[1px] w-full lg:w-auto"
   >
-    <div className="bg-primary p-10 rounded-3xl w-full lg:w-[320px]">
-      <p className="text-white font-black text-[48px]">"</p>
+    <div className="bg-primary p-10 rounded-3xl w-full h-full lg:w-[320px] flex flex-col">
+      <p className="text-white font-black text-[48px]">&quot;</p>
 
-      <div className="mt-1">
+      <div className="flex flex-1 justify-between flex-col gap-7">
         <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
 
-        <div className="mt-7 flex justify-between items-center gap-1">
+        <div className="flex justify-between items-center gap-1">
           <div className="flex-1 flex flex-col">
             <p className="text-white font-medium text-[16px]">
               <span className="green-text-gradient">@</span> {name}
